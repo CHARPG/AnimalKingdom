@@ -1,12 +1,11 @@
 package cucumber.cats;
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
+import io.cucumber.junit.CucumberOptions;
+import io.cucumber.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(plugin = {"pretty"},
-        features = "src/test/resources/cucumber",
-        glue = "src/test/java/cucumber/cats/FeedCatStepDefs.java" )
+        features = "src/test/resources/cucumber/"
+        /*glue = "cucumber.cats.FeedCatStepDefs.java"*/)
 public class RunCucumberTest {
-
 
 }
