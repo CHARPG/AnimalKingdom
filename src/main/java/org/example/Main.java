@@ -2,12 +2,8 @@ package org.example;
 import java.util.ArrayList;
 import java.util.Random;
 public class Main {
-
-    static Random rand = new Random();
     protected static final ArrayList<Cat> catArray = new ArrayList<>();
     protected static final ArrayList<FlyingRat> flyingRatArray = new ArrayList<>();
-    static int random;
-
     private static String[] birdNames = {"Blungo", "Cungo", "Dungo"};
     private static String[] catNames = {"Bingo", "Bongo", "Boingo"};
 
@@ -40,10 +36,9 @@ public class Main {
         //cat killing
         for(int i = 0; i < flyingRatArray.size(); i++)
         {
-            random = rand.nextInt(catArray.size());
-            System.out.println(catArray.get(random).move(flyingRatArray.get(i).getName()));
+            System.out.println(catArray.get(i).move(flyingRatArray.get(i).getName()));
 
-            System.out.println(catArray.get(random).kill(flyingRatArray.get(i--)) + "\n");
+            System.out.println(catArray.get(i).kill(flyingRatArray.get(i--)) + "\n");
         }
         System.out.println("Amount of flying rats " + flyingRatArray.size());
     }

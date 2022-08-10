@@ -51,7 +51,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
          Cat testCat = new Cat("cat", 0, 0);
          Cat testCat2 = new Cat("cat", 0, 0);
 
-         assertEquals("cat breeds with cat", testCat.breed(testCat, testCat2), "this is not it");
+         if(testCat.getClass() == testCat2.getClass()) {
+             assertEquals("cat breeds with cat", testCat.breed(testCat, testCat2), "this is not it");
+         }
      }
 
      @Test
